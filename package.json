@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "color-thief": "^2.1.0",
+    "cors": "^2.4.1",
     "express": "~4.8.6",
     "redis": "^0.12.1",
     "request": "^2.40.0",

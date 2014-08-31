@@ -5,6 +5,7 @@ var request = require('request'),
     crypto = require('crypto'),
     through = require('through2'),
     colorThief = require('color-thief'),
+    cors = require('cors'),
     app = require('express')(),
     redis = require("redis"),
     client = redis.createClient()
@@ -17,6 +18,8 @@ var md5 = function(value) {
 
     return hash.read()
 }
+
+app.use(cors())
 
 app.get('/', function(req, res){
   if(req.query.image) {
